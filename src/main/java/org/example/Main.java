@@ -17,10 +17,12 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        // Создание листов с продуктами
         ArrayList<Fruit> fruits = new ArrayList<>();
         ArrayList<Veggie> veggies = new ArrayList<>();
         ArrayList<Veggie> vegmeat = new ArrayList<>();
         ArrayList<Meat> meat = new ArrayList<>();
+        // Заполнение листов с продуктами
         fruits.add(new Banana());
         fruits.add(new Orange());
         fruits.add(new Apple());
@@ -28,9 +30,10 @@ public class Main {
         veggies.add(new Tomato());
         vegmeat.add(new Tomato());
         meat.add(new Pork());
-        MeatSalad mSalad = new MeatSalad(meat, vegmeat);
+        // Создание "рецептов" салатов и наполнение их листами продуктов
         FruitSalad fSalad =  new FruitSalad(fruits);
         VeggieSalad vSalad = new VeggieSalad(veggies);
+        MeatSalad mSalad = new MeatSalad(meat, vegmeat);
         System.out.println("Total calories in Veggie Salad: " + vSalad.totalCal() + ". Price: " + vSalad.totalPrice());
         System.out.println("Total calories in Fruit Salad: " + fSalad.totalCal() + ". Price: " + fSalad.totalPrice());
         System.out.println("Total calories in Meat Salad: " + mSalad.totalCal() + ". Price: " + mSalad.totalPrice());
