@@ -4,6 +4,8 @@ import org.example.fruits.Apple;
 import org.example.fruits.Banana;
 import org.example.fruits.Fruit;
 import org.example.fruits.Orange;
+import org.example.salads.FruitSalad;
+import org.example.salads.VeggieSalad;
 import org.example.veggies.Cucumber;
 import org.example.veggies.Tomato;
 import org.example.veggies.Veggie;
