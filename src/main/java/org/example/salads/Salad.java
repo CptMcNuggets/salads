@@ -1,4 +1,4 @@
-package org.example;
+package org.example.salads;
 
 public abstract class Salad {
     public abstract int totalPrice();

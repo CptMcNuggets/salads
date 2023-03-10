@@ -1,6 +1,5 @@
 package org.example.salads;
 
-import org.example.Salad;
 import org.example.veggies.Veggie;
 
 import java.util.List;
