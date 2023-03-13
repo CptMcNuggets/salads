@@ -7,7 +7,6 @@ import java.util.List;
 
 public class FruitSalad extends Salad {
     public FruitSalad(List<Fruit> fruitSalad) {
-        products = new ArrayList<>();
         products.addAll(fruitSalad);
     }
 }

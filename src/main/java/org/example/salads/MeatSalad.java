@@ -9,7 +9,6 @@ import java.util.List;
 
 public class MeatSalad extends Salad{
     public MeatSalad(List<Meat> meats, List<Veggie> vegmeat) {
-        products = new ArrayList<>();
         products.addAll(vegmeat);
         products.addAll(meats);
     }

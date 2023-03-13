@@ -34,6 +34,7 @@ public class Main {
         FruitSalad fSalad =  new FruitSalad(fruits);
         VeggieSalad vSalad = new VeggieSalad(veggies);
         MeatSalad mSalad = new MeatSalad(meat, vegmeat);
+        // Вывод результатов
         System.out.println("Total calories in Veggie Salad: " + vSalad.totalCal() + ". Price: " + vSalad.totalPrice());
         System.out.println("Total calories in Fruit Salad: " + fSalad.totalCal() + ". Price: " + fSalad.totalPrice());
         System.out.println("Total calories in Meat Salad: " + mSalad.totalCal() + ". Price: " + mSalad.totalPrice());
