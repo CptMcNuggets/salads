@@ -5,8 +5,8 @@ import org.example.veggies.Veggie;
 import java.util.List;
 
 public class VeggieSalad extends Salad {
-    public VeggieSalad(List<Veggie> veggieSalad) {
-        super(8);
+    public VeggieSalad(List<Veggie> veggieSalad, int freshness) {
+        super(freshness);
         products.addAll(veggieSalad);
     }
     @Override
