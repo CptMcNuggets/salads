@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Salad {
+    public int freshness;
+    public Salad(int freshness) {
+        this.freshness = freshness;
+    }
     public List<Product> products = new ArrayList<>();
     public int totalPrice() {
         int totalPrice = 0;
