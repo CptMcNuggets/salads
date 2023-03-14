@@ -13,12 +13,12 @@ public abstract class Salad {
             totalPrice += item.getPrice();
         }
         return totalPrice;
-    };
+    }
     public int totalCal() {
       int totalCal = 0;
       for (Product item: products) {
           totalCal += item.getCal();
       }
       return totalCal;
-    };
+    }
 }
