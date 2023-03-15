@@ -1,5 +1,6 @@
 package org.example.salads;
 
+import org.example.Constants;
 import org.example.Product;
 
 import java.util.ArrayList;
@@ -9,6 +10,9 @@ public abstract class Salad {
     public String country;
     public Salad(String country) {
         this.country = country;
+    }
+    public String getCountry() {
+        return country;
     }
     public List<Product> products = new ArrayList<>();
     public int totalPrice() {
