@@ -1,6 +1,6 @@
 package org.example.veggies;
 
-public class Cucumber extends Veggie{
+public class Cucumber extends Vegetable {
     private static final int CALORIES = 10;
     private static final int PRICE = 25;
     @Override

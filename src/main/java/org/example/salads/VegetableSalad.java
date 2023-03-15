@@ -1,15 +1,13 @@
 package org.example.salads;
 
-import org.example.meat.Meat;
 import org.example.veggies.Vegetable;
 
 import java.util.List;
 
-public class MeatSalad extends Salad{
-    public MeatSalad(List<Meat> meats, List<Vegetable> vegetables, String country) {
+public class VegetableSalad extends Salad {
+    public VegetableSalad(List<Vegetable> vegetableSalad, String country) {
         super(country);
-        products.addAll(vegetables);
-        products.addAll(meats);
+        products.addAll(vegetableSalad);
     }
 
     @Override
@@ -27,9 +25,9 @@ public class MeatSalad extends Salad{
         }
         return country == ((Salad)obj).country;
     }
+
     @Override
     public String toString() {
-        return "Meat salad from " + this.country;
+        return "Veggie salad from " + this.country;
     }
-
 }
