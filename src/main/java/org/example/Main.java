@@ -46,8 +46,17 @@ public class Main {
         //Создание сета салатов
         HashSet<Salad> countrySalads = new HashSet<>();
         countrySalads.addAll(allSalads);
+        String strSalad = countrySalads.toString();
+        for (int i = 0; i < strSalad.length(); i++) {
+            if (strSalad.charAt(i) == '[') {
+                strSalad = strSalad.substring(i+1);
+            }
+            if (strSalad.charAt(i) == ']') {
+                strSalad = strSalad.substring(0,i);
+            }
+        }
 
-        System.out.println(countrySalads);
+        System.out.println("We have salads from all over the world: " + strSalad);
         // Вывод результатов
         System.out.println("Total calories in Veggie Salad: " + veggieSalad.totalCal() + ". Price: " + veggieSalad.totalPrice());
         System.out.println("Total calories in Fruit Salad: " + fruitSalad.totalCal() + ". Price: " + fruitSalad.totalPrice());
