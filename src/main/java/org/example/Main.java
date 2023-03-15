@@ -35,18 +35,19 @@ public class Main {
         // Создание "рецептов" салатов и наполнение их листами продуктов
         FruitSalad fruitSalad =  new FruitSalad(fruits, Constants.THAILAND);
         VeggieSalad veggieSalad = new VeggieSalad(veggies,Constants.GEORGIA);
-        MeatSalad meatSaladNew = new MeatSalad(meat, veggies, Constants.FRANCE)
+        MeatSalad meatSaladNew = new MeatSalad(meat, veggies, Constants.FRANCE);
         MeatSalad meatSalad = new MeatSalad(meat, vegmeat, Constants.GEORGIA);
-
+        // Создание листа со всеми салатами
         ArrayList<Salad> allSalads = new ArrayList<>();
         allSalads.add(meatSalad);
         allSalads.add(meatSaladNew);
         allSalads.add(fruitSalad);
         allSalads.add(veggieSalad);
+        //Создание сета салатов
         HashSet<Salad> countrySalads = new HashSet<>();
+        countrySalads.addAll(allSalads);
 
-
-        System.out.println("Georgian salad:" + );
+        System.out.println(countrySalads);
         // Вывод результатов
         System.out.println("Total calories in Veggie Salad: " + veggieSalad.totalCal() + ". Price: " + veggieSalad.totalPrice());
         System.out.println("Total calories in Fruit Salad: " + fruitSalad.totalCal() + ". Price: " + fruitSalad.totalPrice());

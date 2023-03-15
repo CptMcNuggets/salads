@@ -10,7 +10,6 @@ public class FruitSalad extends Salad {
         super(country);
         products.addAll(fruitSalad);
     }
-
     @Override
     public int hashCode() {
         return 42 * country.hashCode();
@@ -26,4 +25,9 @@ public class FruitSalad extends Salad {
         }
         return country == ((Salad)obj).country;
     }
+    @Override
+    public String toString() {
+        return "Fruit salad from " + this.country;
+    }
+
 }

@@ -29,4 +29,9 @@ public class MeatSalad extends Salad{
         }
         return country == ((Salad)obj).country;
     }
+    @Override
+    public String toString() {
+        return "Meat salad from " + this.country;
+    }
+
 }
