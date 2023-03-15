@@ -31,9 +31,9 @@ public class Main {
         vegmeat.add(new Tomato());
         meat.add(new Pork());
         // Создание "рецептов" салатов и наполнение их листами продуктов
-        FruitSalad fruitSalad =  new FruitSalad(fruits);
-        VeggieSalad veggieSalad = new VeggieSalad(veggies);
-        MeatSalad meatSalad = new MeatSalad(meat, vegmeat);
+        FruitSalad fruitSalad =  new FruitSalad(fruits, Constants.THAILAND);
+        VeggieSalad veggieSalad = new VeggieSalad(veggies,Constants.FRANCE);
+        MeatSalad meatSalad = new MeatSalad(meat, vegmeat, Constants.THAILAND);
         // Вывод результатов
         System.out.println("Total calories in Veggie Salad: " + veggieSalad.totalCal() + ". Price: " + veggieSalad.totalPrice());
         System.out.println("Total calories in Fruit Salad: " + fruitSalad.totalCal() + ". Price: " + fruitSalad.totalPrice());

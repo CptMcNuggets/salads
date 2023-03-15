@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MeatSalad extends Salad{
-    public MeatSalad(List<Meat> meats, List<Veggie> vegmeat) {
+    public MeatSalad(List<Meat> meats, List<Veggie> vegmeat, String country) {
+        super(country);
         products.addAll(vegmeat);
         products.addAll(meats);
     }

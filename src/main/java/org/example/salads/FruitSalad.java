@@ -6,7 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FruitSalad extends Salad {
-    public FruitSalad(List<Fruit> fruitSalad) {
+    public FruitSalad(List<Fruit> fruitSalad, String country) {
+        super(country);
         products.addAll(fruitSalad);
     }
 }
