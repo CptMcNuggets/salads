@@ -10,4 +10,20 @@ public class FruitSalad extends Salad {
         super(country);
         products.addAll(fruitSalad);
     }
+
+    @Override
+    public int hashCode() {
+        return 42 * country.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Salad)) {
+            return false;
+        }
+        return country == ((Salad)obj).country;
+    }
 }

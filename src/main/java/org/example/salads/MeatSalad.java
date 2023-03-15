@@ -13,4 +13,20 @@ public class MeatSalad extends Salad{
         products.addAll(vegmeat);
         products.addAll(meats);
     }
+
+    @Override
+    public int hashCode() {
+        return 42 * country.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Salad)) {
+            return false;
+        }
+        return country == ((Salad)obj).country;
+    }
 }
