@@ -29,4 +29,20 @@ public abstract class Salad {
       }
       return totalCal;
     }
+
+    @Override
+    public int hashCode() {
+        return 42 * country.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Salad)) {
+            return false;
+        }
+        return country == ((Salad)obj).country;
+    }
 }

@@ -13,21 +13,6 @@ public class MeatSalad extends Salad{
     }
 
     @Override
-    public int hashCode() {
-        return 42 * country.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof Salad)) {
-            return false;
-        }
-        return country == ((Salad)obj).country;
-    }
-    @Override
     public String toString() {
         return "Meat salad from " + this.country;
     }
