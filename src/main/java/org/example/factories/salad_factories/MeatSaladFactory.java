@@ -10,8 +10,9 @@ import org.example.veggies.Vegetable;
 import java.util.List;
 
 public class MeatSaladFactory extends SaladFactory {
-    public MeatSaladFactory(MeatFactory meatFactory, VegetableFactory vegetableFactory) {
-        super(new ProductFactory[]{meatFactory, vegetableFactory});
+    public MeatSaladFactory(int minProductAmount, int maxProductAmount) {
+        super(new ProductFactory[]{new MeatFactory(minProductAmount, maxProductAmount),
+                new VegetableFactory(minProductAmount, maxProductAmount)});
     }
 
     @Override

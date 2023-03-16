@@ -9,8 +9,8 @@ import java.util.List;
 
 public class FruitSaladFactory extends SaladFactory {
 
-    public FruitSaladFactory(FruitFactory productFactory) {
-        super(new ProductFactory[]{productFactory});
+    public FruitSaladFactory(int minProductAmount, int maxProductAmount) {
+        super(new ProductFactory[]{new FruitFactory(minProductAmount, maxProductAmount)});
     }
 
     @Override

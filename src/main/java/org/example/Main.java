@@ -21,15 +21,15 @@ public class Main {
         // Создание листа со всеми салатами
 
         ArrayList<Salad> allSalads = new ArrayList<>();
-        allSalads.add(new FruitSaladFactory(new FruitFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT)).getSalad());
-        allSalads.add(new FruitSaladFactory(new FruitFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT)).getSalad());
-        allSalads.add(new FruitSaladFactory(new FruitFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT)).getSalad());
-        allSalads.add(new VegetableSaladFactory(new VegetableFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT)).getSalad());
-        allSalads.add(new VegetableSaladFactory(new VegetableFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT)).getSalad());
-        allSalads.add(new VegetableSaladFactory(new VegetableFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT)).getSalad());
-        allSalads.add(new MeatSaladFactory(new MeatFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT), new VegetableFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT)).getSalad());
-        allSalads.add(new MeatSaladFactory(new MeatFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT), new VegetableFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT)).getSalad());
-        allSalads.add(new MeatSaladFactory(new MeatFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT), new VegetableFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT)).getSalad());
+        allSalads.add(new FruitSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
+        allSalads.add(new FruitSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
+        allSalads.add(new FruitSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
+        allSalads.add(new VegetableSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
+        allSalads.add(new VegetableSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
+        allSalads.add(new VegetableSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
+        allSalads.add(new MeatSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
+        allSalads.add(new MeatSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
+        allSalads.add(new MeatSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
 
         //Создание сета салатов
         HashSet<Salad> countrySalads = new HashSet<>();
