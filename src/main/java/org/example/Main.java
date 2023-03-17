@@ -15,6 +15,7 @@ import org.example.salads.MeatSalad;
 import org.example.salads.Salad;
 import org.example.salads.VegetableSalad;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -25,22 +26,24 @@ public class Main {
     private static final int MAX_PRODUCT_AMOUNT = 30;
     private static final int MIN_SALADS = 3;
     private static final int MAX_SALADS = 7;
+    public static final Class[] salads = {FruitSaladFactory.class, MeatSaladFactory.class, VegetableSaladFactory.class};
     public static List<Salad> getRandomSalads (Class[] saladClassArray) {
         int amount = new Random().ints(MIN_SALADS, MAX_SALADS).findFirst().getAsInt();
         List<Salad> rvList = new ArrayList<>();
         try {
             for (int i = 0; i < amount; i++) {
                 int index = new Random().ints(0,saladClassArray.length).findFirst().getAsInt();
-                rvList.add((Salad) saladClassArray[index].newInstance());
+                Object factory = saladClassArray[index].getDeclaredConstructor(int.class,int.class).newInstance(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT);
+                SaladFactory saladFactory = (SaladFactory) factory;
+                rvList.add(saladFactory.getSalad());
             }
-        } catch (InstantiationException | IllegalAccessException e) {
+        } catch (IllegalArgumentException | NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
             System.out.println(e.getLocalizedMessage());
         }
         return rvList;
     }
-    public static final Class[] salads = {FruitSalad.class, MeatSalad.class, VegetableSalad.class};
     public static void main(String[] args) {
-        System.out.println(getRandomSalads(salads));
+        System.out.println("All our salads: " + getRandomSalads(salads));
         // Создание листа со всеми салатами
         ArrayList<Salad> allSalads = new ArrayList<>();
         allSalads.add(new FruitSaladFactory(MIN_PRODUCT_AMOUNT, MAX_PRODUCT_AMOUNT).getSalad());
